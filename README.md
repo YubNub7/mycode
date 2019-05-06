@@ -9,5 +9,5 @@ What things you need to install the software and how to install thenm. For now, 
 ## Built With
 * [Python](https://www.python.org/) - The coding language used
 
-## Authors
+# Authors
 * Tom - *Initial Work*
