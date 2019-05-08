@@ -1,0 +1,21 @@
+---
+ - hosts: planet-express
+
+   tasks:
+    - name: "Figlet - install Figlet"
+      apt: 
+        name: figlet
+        state: present
+      become: True
+   
+    - name: "Bastet - install Bastet"
+      apt:
+        name: bastet
+        state: present
+      become: True
+   
+    - name: "ninvaders - install ninvaders"
+      apt:
+        name: ninvaders
+        state: present
+      become: True

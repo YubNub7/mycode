@@ -1,0 +1,19 @@
+---
+ - hosts: planet-express
+
+   tasks:
+    - name: "figlet - uninstall figlet"
+      apt:
+        name: figlet
+        state: absent
+      become: True
+    - name: "bastet - unistall figlet"
+      apt:
+        name: bastet
+        state: absent
+      become: True
+    - name: "ninvaders - uninstall ninvaders"
+      apt:
+        name: ninvaders
+        state: absent
+      become: True
