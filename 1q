@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+import urllib.request
+import json
+import yaml
+
+majortom = 'http://api.open-notify.org/astros.json'
+groundctrl = urllib.request.urlopen(majortom)
+helmet = groundctrl.read()
+helmetson = json.loads(helmet.decode('utf-8'))
+#print("\n\nConverted python data")
+#print(helmetson)
+#print("\n\nPeople in Space: ",helmetson['number'])
+people = helmetson['people']
+#print(people)
+
+def main():
+    space = [{'craft': 'ISS', 'name': 'Oleg Kononenko'}, {'craft': 'ISS', 'name': 'David Saint-Jacques'}, {'craft': 'ISS', 'name': 'Anne McClain'}, {'craft': 'ISS', 'name': 'Alexey Ovchinin'}, {'craft': 'ISS', 'name': 'Nick Hague'}, {'craft': 'ISS', 'name': 'Christina Koch'}]
+    yamlstring = yaml.dump(space)
+    print(yamlstring)
+main()
